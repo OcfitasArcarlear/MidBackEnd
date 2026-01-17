@@ -9,7 +9,7 @@ import {
 
 const app = new Hono();
 
-/* CREATE */
+
 app.post("/attendance", async (c) => {
   const body = await c.req.json();
 
@@ -20,17 +20,17 @@ app.post("/attendance", async (c) => {
   return c.json({ id: result.lastInsertRowid }, 201);
 });
 
-/* READ ALL */
+
 app.get("/attendance", (c) =>
   c.json(getAllAttendance())
 );
 
-/* READ WITH USER */
+
 app.get("/attendance/with-user", (c) =>
   c.json(getAttendanceWithUser())
 );
 
-/* UPDATE */
+
 app.put("/attendance/:id", async (c) => {
   const id = Number(c.req.param("id"));
   if (!id) return c.json({ error: "Invalid id" }, 400);
@@ -39,7 +39,7 @@ app.put("/attendance/:id", async (c) => {
   return c.json({ message: "Updated" });
 });
 
-/* DELETE */
+
 app.delete("/attendance/:id", (c) => {
   const id = Number(c.req.param("id"));
   if (!id) return c.json({ error: "Invalid id" }, 400);
