@@ -1,0 +1,33 @@
+###
+GET http://localhost:3000/api/attendance
+
+###
+GET http://localhost:3000/api/attendance/with-user
+
+###
+POST http://localhost:3000/api/attendance
+Content-Type: application/json
+
+{
+  "UserID": 1,
+  "Date": "2026-01-17",
+  "Status": "Present",
+  "CheckInTime": "08:30",
+  "CheckOutTime": "17:00"
+}
+
+###
+PUT http://localhost:3000/api/attendance/1
+Content-Type: application/json
+
+{
+  "Date": "2026-01-17",
+  "Status": "Present",
+  "CheckInTime": "08:45",
+  "CheckOutTime": "17:30"
+}
+
+###
+DELETE http://localhost:3000/api/attendance/1
+
+###
