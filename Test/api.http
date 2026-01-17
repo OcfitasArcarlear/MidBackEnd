@@ -11,7 +11,7 @@ Content-Type: application/json
 {
   "UserID": 1,
   "Date": "2026-01-17",
-  "Status": "Present",
+  "Status": "มาทำงาน",
   "CheckInTime": "08:30",
   "CheckOutTime": "17:00"
 }
@@ -22,9 +22,9 @@ Content-Type: application/json
 
 {
   "Date": "2026-01-17",
-  "Status": "Present",
-  "CheckInTime": "08:45",
-  "CheckOutTime": "17:30"
+  "Status": "มาทำงาน",
+  "CheckInTime": "08:00",
+  "CheckOutTime": "19:00"
 }
 
 ###
